@@ -16,6 +16,7 @@ function Pizza(props) {
             <p>Green Bell Pepper? {details.topping2}</p>
             <p>Extra Cheese? {details.topping3}</p>
             <p>Sausage? {details.topping4}</p>
+            <p>Special Instructions: {details.special}</p>
         </div>
     )
 }

@@ -17,6 +17,7 @@ const initialFormValues = {
   topping2: false,
   topping3: false,
   topping4: false,
+  special: ''
 }
 const initialFormErrors = {
   name: '',
@@ -60,7 +61,8 @@ const App = () => {
       topping1: formValues.topping1 ? 'Yes' : 'No',
       topping2: formValues.topping2 ? 'Yes' : 'No',
       topping3: formValues.topping3 ? 'Yes' : 'No',
-      topping4: formValues.topping4 ? 'Yes' : 'No'
+      topping4: formValues.topping4 ? 'Yes' : 'No',
+      special: formValues.special.trim()
     }
     postNewPizza(newPizza)
   }

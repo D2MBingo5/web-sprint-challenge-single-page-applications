@@ -91,6 +91,16 @@ export default function Form (props) {
                 </label>
             </div>
 
+            <label>Special Instructions:
+                <input 
+                    id='special-text'
+                    name='special'
+                    type='text'
+                    value={values.special}
+                    onChange={onChange}
+                />
+            </label>
+
             <div className='submitBtn-container'>
                 <button id='order-button' disabled={disabled}>Submit</button>
             </div>
