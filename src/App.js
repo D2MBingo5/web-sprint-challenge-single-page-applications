@@ -1,11 +1,36 @@
-import React from "react";
-
+// Dependency imports
+import React, { useState, useEffect } from 'react'
 import { Route, Switch, Link } from 'react-router-dom'
+import axios from 'axios'
+import { reach } from 'yup'
+
+// File imports
+import Form from './Form'
+import schema from './formSchema'
+
+// Pizza Form initial states
+const initialFormValues = {
+  name: '',
+}
+const initialFormErrors = {
+  name: '',
+}
+const initalPizzaOrders = []
+const initialDisabled = true
 
 const App = () => {
+  // states
+  const [pizzas, setPizzas] = useState(initalPizzaOrders)
+  const [formValues, setFormValues] = useState(initialFormValues)
+  const [formErrors, setFormErrors] = useState(initialFormErrors)
+  const [disabled, setDisabled] = useState(initialDisabled)
+
+  const postNewPizza = newPizza => {
+
+  }
+
   return (
     <Switch>
-      
       <Route exact path='/'>
         <div>
           <h1>Lambda Eats</h1>          
@@ -24,12 +49,11 @@ const App = () => {
           <Link to='/'>
             <button>Home</button>
           </Link>
+          <Form />
         </div>
       </Route>
-    </Switch>
-        
-
-
+      {/* Create a Your Cart route that displays the api call */}
+    </Switch>        
   );
 };
 export default App;
