@@ -1,11 +1,35 @@
 import React from "react";
 
+import { Route, Switch, Link } from 'react-router-dom'
+
 const App = () => {
   return (
-    <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
-    </>
+    <Switch>
+      
+      <Route exact path='/'>
+        <div>
+          <h1>Lambda Eats</h1>          
+          <Link to='/'>
+            <button>Home</button>
+          </Link>
+          <Link to='/pizza'>
+            <button id='order-pizza'>Pizza?</button>
+          </Link>          
+        </div>        
+      </Route>
+
+      <Route path='/pizza'>
+        <div>
+          <h2>Build Your Own Pizza</h2>
+          <Link to='/'>
+            <button>Home</button>
+          </Link>
+        </div>
+      </Route>
+    </Switch>
+        
+
+
   );
 };
 export default App;
