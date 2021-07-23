@@ -4,12 +4,13 @@ import React from 'react'
 // react-checklist - I thought that making a react-checklist would cause my failed test to pass, but I could not get it to pass.
 // import { useChecklist } from 'react-checklist'
 
-const data = [
-    { _id: 1, label: 'Pepperoni' },
-    { _id: 2, label: 'Green Bell Pepper' },
-    { _id: 3, label: 'Extra Cheese' },
-    { _id: 4, label: 'Sausage' }
-]
+// react-checklist
+// const data = [
+//     { _id: 1, label: 'Pepperoni' },
+//     { _id: 2, label: 'Green Bell Pepper' },
+//     { _id: 3, label: 'Extra Cheese' },
+//     { _id: 4, label: 'Sausage' }
+// ]
 
 // The Build a Pizza form
 export default function Form (props) {

@@ -77,7 +77,7 @@ const App = () => {
         <div>
           <h1>Lambda Eats</h1>          
           <Link to='/'>
-            <button>Home</button>
+            <button id='home'>Home</button>
           </Link>
           <Link to='/pizza'>
             <button id='order-pizza'>Pizza?</button>
@@ -92,7 +92,7 @@ const App = () => {
         <div>
           <h2>Build Your Own Pizza</h2>
           <Link to='/'>
-            <button>Home</button>
+            <button id='home'>Home</button>
           </Link>
           <Link to='/cart'>
             <button id='cartBtn'>Your Cart</button>
@@ -112,7 +112,7 @@ const App = () => {
         <div>
           <h2>Your Cart of Created Pizzas</h2>
           <Link to='/'>
-            <button>Home</button>
+            <button id='home'>Home</button>
           </Link>
           <Link to='/pizza'>
             <button id='order-pizza'>Pizza?</button>
