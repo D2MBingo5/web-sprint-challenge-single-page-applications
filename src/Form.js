@@ -1,6 +1,16 @@
 // File created for organization
 import React from 'react'
 
+// react-checklist - I thought that making a react-checklist would cause my failed test to pass, but I could not get it to pass.
+// import { useChecklist } from 'react-checklist'
+
+const data = [
+    { _id: 1, label: 'Pepperoni' },
+    { _id: 2, label: 'Green Bell Pepper' },
+    { _id: 3, label: 'Extra Cheese' },
+    { _id: 4, label: 'Sausage' }
+]
+
 // The Build a Pizza form
 export default function Form (props) {
     const {
@@ -10,6 +20,12 @@ export default function Form (props) {
         disabled,
         errors
     } = props
+
+    // react-checklist
+    // const { handleCheck, checkedItems } = useChecklist(data, {
+    //     key: '_id',
+    //     keyType: 'number',
+    // })
 
     const onSubmit = evt => {
         evt.preventDefault()
@@ -90,6 +106,26 @@ export default function Form (props) {
                     />
                 </label>
             </div>
+
+            {/* Here I tried implementing a react-checklist, but I realized I do not know how to implement the data into formSchema.js */}
+            {/* Checklist
+            <div className='toppings-checklist'>
+                <h3>Toppings</h3>
+                <ul>
+                    {data.map((v, i) => (
+                        <li key={i}>
+                            <input 
+                                type='checkbox'
+                                data-key={v._id}
+                                checked={checkedItems.has(v._id)}
+                                onChange={onChange}
+                            />
+                            <label>{v.label}</label>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+             */}
 
             <label>Special Instructions:
                 <input 
