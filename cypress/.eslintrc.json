@@ -1,3 +1,5 @@
+// created to aid form_test.js
+
 {
     "extends": [
         "plugin:cypress/recommended"
