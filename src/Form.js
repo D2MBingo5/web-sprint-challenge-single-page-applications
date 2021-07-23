@@ -1,3 +1,4 @@
+// File created for organization
 import React from 'react'
 
 // The Build a Pizza form
@@ -16,9 +17,9 @@ export default function Form (props) {
     }
 
     const onChange = evt => {
-        const { id, value, type, checked } = evt.target
+        const { name, value, type, checked } = evt.target
         const valueToUse = type === 'checkbox' ? checked : value
-        change(id, valueToUse)
+        change(name, valueToUse)
     }
 
     return (
@@ -27,19 +28,19 @@ export default function Form (props) {
                 <div>{errors.name}</div>
             </div>
                 
-                <label>Name:
-                    <input 
-                        id='name-input'
-                        name='name'
-                        type='text'
-                        value={values.name}
-                        onChange={onChange}
-                    />
-                </label>
+            <label>Name:
+                <input 
+                    id='name-input'
+                    name='name'
+                    type='text'
+                    value={values.name}
+                    onChange={onChange}
+                />
+            </label>
 
-                <div className='submitBtn-container'>
-                    <button id='order-button' disabled={disabled}>Submit</button>
-                </div>
+            <div className='submitBtn-container'>
+                <button id='order-button' disabled={disabled}>Submit</button>
+            </div>
         </form>
     )
 }
