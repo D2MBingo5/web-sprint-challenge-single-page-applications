@@ -12,9 +12,15 @@ import Pizza from './Pizza'
 // Pizza Form initial states
 const initialFormValues = {
   name: '',
+  size: '',
+  topping1: false,
+  topping2: false,
+  topping3: false,
+  topping4: false,
 }
 const initialFormErrors = {
   name: '',
+  size: ''
 }
 const initalPizzaOrders = []
 const initialDisabled = true
@@ -49,7 +55,12 @@ const App = () => {
 
   const formSubmit = () => {
     const newPizza = {
-      name: formValues.name.trim()
+      name: formValues.name.trim(),
+      size: formValues.size.trim(),
+      topping1: formValues.topping1 ? 'Yes' : 'No',
+      topping2: formValues.topping2 ? 'Yes' : 'No',
+      topping3: formValues.topping3 ? 'Yes' : 'No',
+      topping4: formValues.topping4 ? 'Yes' : 'No'
     }
     postNewPizza(newPizza)
   }
@@ -104,7 +115,6 @@ const App = () => {
           <Link to='/pizza'>
             <button id='order-pizza'>Pizza?</button>
           </Link>
-
           {
             pizzas.map(pizza => {
               return (
